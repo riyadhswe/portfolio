@@ -6,6 +6,7 @@ def home(request):
         "name"  : "Riyadh",
         "age"   : 24,
         "phone" :'8801740280586',
+        'friend_name': ['A','B','C','D']
     }
     return render(request,'index.html',text)
 

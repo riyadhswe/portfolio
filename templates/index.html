@@ -12,6 +12,17 @@ Index Page
     <p>Name : {{ name }}</p>
     <p>Age  : {{ age }}</p>
     <p>Phone: {{ phone }}</p>
+        <ul class="list">
+ {% for friend_name in friend_name%}
+     <li class="list-item">
+     {{ friend_name }}
+     </li>
+
+{% endfor %}
+
+
+        </ul>
+
 </div>
 {%endblock %}
 
