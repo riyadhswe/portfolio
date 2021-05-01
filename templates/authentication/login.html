@@ -1,0 +1,46 @@
+{% extends 'layouts.html' %}
+
+{%block content%}
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="text-center">Login Your Account</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+
+    <section id="contact" class="contact">
+
+      <div class="container">
+
+
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-4">
+              <h3 class="text-center">Login Your Account</h3>
+            <form action="" method="post" role="form">
+              {% csrf_token %}
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+                   <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="text-center">
+                  <button type="submit" class="btn btn-success">login</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+{%endblock %}
