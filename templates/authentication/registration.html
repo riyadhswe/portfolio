@@ -1,10 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Registration</title>
-</head>
-<body>
+{% extends 'layouts.html' %}
 
-</body>
-</html>
+{%block content%}
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="text-center">Create a new account</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+
+    <section id="contact" class="contact">
+
+      <div class="container">
+
+
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-4">
+              <h3 class="text-center">Registration</h3>
+            <form action="" method="post" role="form">
+              {% csrf_token %}
+                <!-- Registration -->
+              <div class="form-group">
+                <input type="txt" class="form-control" name="name" id="subject" placeholder="Full name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+
+                    <div class="form-group">
+                <input type="email" class="form-control" name="email" id="subject" placeholder="Email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+
+                          <div class="form-group">
+                <input type="password" class="form-control" name="password" id="subject" placeholder="password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+
+                                <div class="form-group">
+                <input type="password" class="form-control" name="password" id="subject" placeholder="confirm password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+
+              <div class="text-center">
+                  <button type="submit" class="btn btn-success">Forgot Password</button></div>
+            </form>
+              <small>already have an account<a href="{% url 'login' %}"> Click Here</a> </small>
+          </div>
+            <!-- Registration -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+{%endblock %}
