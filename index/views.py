@@ -7,7 +7,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    aboutdata = about.objects.all()[0]
+    aboutdata = about.objects.all()
     sliderdata = slider.objects.all()
     clientdata = client.objects.all()
     contex={

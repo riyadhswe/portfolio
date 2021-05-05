@@ -25,12 +25,12 @@
             <form action="" method="post" role="form">
               {% csrf_token %}
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>
               </div>
                 <small>Forgot my<a href="{% url 'forgotpassword' %}"> password</a> </small>
                    <div class="form-group">
-                <input type="text" class="form-control" name="email" id="email" placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>
               </div>
               <div class="text-center">
