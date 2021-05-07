@@ -58,7 +58,12 @@
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'contact' %}">Contact</a></li>
+            {% if user.is_authenticate %}
+                <li><a href="{% url 'employee.profile' %}">Profile</a></li>
+
+            {% else %}
             <li><a href="{% url 'login' %}">Account</a></li>
+        {% endif %}
 
         </ul>
       </nav><!-- .nav-menu -->
